@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from '../features/authSlice';
-import channelReducer from '../features/channelSlice';
-import uiReducer from '../features/uiSlice';
-import videoReducer from '../features/videoSlice';
+import authSlice from '../features/authSlice';
+import channelSlice from '../features/channelSlice';
+import uiSlice from '../features/uiSlice';
+import videoSlice from '../features/videoSlice';
 
 const store = configureStore({
     reducer : {
-      auth : authReducer,
-      ui : uiReducer,
-      video : videoReducer,
-      channel : channelReducer
+      auth : authSlice,
+      ui : uiSlice,
+      video : videoSlice,
+      channel : channelSlice
     },
 });
 

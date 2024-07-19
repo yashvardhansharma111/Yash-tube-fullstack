@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import  Header  from "./components/Header/Header.jsx"
+import Header from "./components/Header/Header.jsx";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/sideBar/Sidebar.jsx";
 import { useCurrentUser } from "./hooks/auth.hook.js";
@@ -22,7 +22,7 @@ function App() {
   }, [userData, isFetching, dispatch, user]);
 
   if (isLoading || isFetching) {
-    return <n />;
+    return null; // Render nothing while loading
   }
 
   if (error) {
@@ -34,11 +34,9 @@ function App() {
   return (
     <div className="h-screen overflow-y-auto bg-[#121212] text-white">
       <Header />
-      <div className="flex min-h-[calc(100vh-66px)] sm:min-h-[calc(100vh-82px)]">
-        <Sidebar />
+      
         <Outlet />
       </div>
-    </div>
   );
 }
 

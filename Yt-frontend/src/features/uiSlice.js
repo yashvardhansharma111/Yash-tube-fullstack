@@ -22,5 +22,6 @@ const uiSlice = createSlice({
   },
 });
 
-export const { setSideBarFullSize, setShowUploadVideo, setShowEditVideo } = uiSlice.actions;
+export const { setSideBarFullSize, setShowUploadVideo, setShowEditVideo } =
+  uiSlice.actions;
 export default uiSlice.reducer;

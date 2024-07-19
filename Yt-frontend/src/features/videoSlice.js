@@ -19,4 +19,5 @@ const videoSlice = createSlice({
 });
 
 export const { setVideo, setVideoForEdit } = videoSlice.actions;
+
 export default videoSlice.reducer;
